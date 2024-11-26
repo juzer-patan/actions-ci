@@ -15,4 +15,9 @@ jobs:
       - name: Build the application
         run: echo "Building in $ENVIRONMENT"
       - name: Push the docker image
-        run: echo "Pushing the docker image"       
+        run: echo "Pushing the docker image"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build the application
+        run: echo "Deploying in $ENVIRONMENT"  
