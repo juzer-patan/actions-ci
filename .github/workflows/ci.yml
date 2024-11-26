@@ -5,7 +5,7 @@ on:
     branches:
       - master
 
- env:
+env:
   ENVIRONMENT: Prod  # Setting the environment variable directly using the env keyword
 
 jobs:
