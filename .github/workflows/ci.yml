@@ -17,8 +17,7 @@ jobs:
       - name: Push the docker image
         run: echo "Pushing the docker image"
   deploy:
-    runs-on: ubuntu-latest
     needs: build
-    steps:
-      - name: Deploy the application
-        run: echo "Deploying in $ENVIRONMENT"  
+    uses: juzer-patan/actions-cd/.github/workflows/cd.yml@master
+    with:
+      environment: $ENVIRONMENT
