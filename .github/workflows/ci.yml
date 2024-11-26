@@ -3,10 +3,10 @@ name: CI Workflow
 on:
   push:
     branches:
-      - master
+      - dev
 
 env:
-  ENVIRONMENT: Prod  # Setting the environment variable directly using the env keyword
+  ENVIRONMENT: Dev  # Setting the environment variable directly using the env keyword
 
 jobs:
   build:
@@ -18,6 +18,6 @@ jobs:
         run: echo "Pushing the docker image"
   deploy:
     needs: build
-    uses: juzer-patan/actions-cd/.github/workflows/cd.yml@master
+    uses: juzer-patan/actions-cd/.github/workflows/cd.yml@dev
     with:
-      environment: Prod
+      environment: Dev
