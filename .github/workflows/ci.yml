@@ -20,4 +20,4 @@ jobs:
     needs: build
     uses: juzer-patan/actions-cd/.github/workflows/cd.yml@master
     with:
-      environment: {{ env.ENVIRONMENT }}
+      environment: ${{ env.ENVIRONMENT }}
