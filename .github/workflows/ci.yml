@@ -6,7 +6,7 @@ on:
       - master
 
  env:
-      ENVIRONMENT: Prod  # Setting the environment variable directly using the env keyword
+  ENVIRONMENT: Prod  # Setting the environment variable directly using the env keyword
 
 jobs:
   build:
